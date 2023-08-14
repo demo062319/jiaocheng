@@ -32,7 +32,7 @@ git下载地址：https://registry.npmmirror.com/binary.html?path=git-for-window
 输入git commit -m "随便输个名字"并回车；
 
 4-3 关联github仓库
-将github中的repository的SSH地址复制一下，打开git-bash.exe，进入项目目录下,输入git remote add origin git "SSH地址"并回车；
+将github中的repository的SSH地址复制一下，打开git-bash.exe，进入项目目录下,输入git remote add origin "SSH地址"并回车；
 
 4-4 上传本地代码
 打开git-bash.exe，进入项目目录下，输入git push -u origin master或git push -u origin master -f并回车，输入yes.
