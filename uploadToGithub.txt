@@ -1,0 +1,38 @@
+#--将代码上传到github教程--
+1-1 登录github
+登录或注册，地址：www.github.com;
+
+1-2 创建repository
+点击头像， 点击your repositories，点击右上角的“new”，编辑信息，点击“create repository";
+
+2-1 下载git客户端
+git下载地址：https://registry.npmmirror.com/binary.html?path=git-for-windows/
+
+2-2 安装客户端
+默认安装选项就行；
+
+2-3 绑定用户
+打开git-bash.exe，输入git config --global user.name "账号名"，并按回车键；
+输入git config --global user.email "邮箱地址"，并按回车键；
+
+3-1 生成ssh key
+打开git-bash.exe，输入ssh-keygen -t rsa -C “邮箱地址”，按回车键，
+生成公钥id_rsa.pub文件，其位置在C:\Users\电脑用户名\ .ssh目录下；
+
+3-2 为github账号配置ssh key
+点击头像，点击settings，点击并进入SSH and GPG keys页面，输入title和Key，其中key为公钥，
+将C:\Users\电脑用户名\ .ssh目录下的id_rsa.pub用记事本打开，
+复制里面的内容并粘贴到SSH and GPG keys的Key文本框中；
+
+4-1 创建一个本地项目
+准备好待上传的项目；
+
+4-2 建立本地仓库
+打开git-bash.exe，输入cd "项目目录路径"进入待上传的项目目录下，输入git init并回车 ，输入git add . 并回车，
+输入git commit -m "随便输个名字"并回车；
+
+4-3 关联github仓库
+将github中的repository的SSH地址复制一下，打开git-bash.exe，进入项目目录下,输入git remote add origin git "SSH地址"并回车；
+
+4-4 上传本地代码
+打开git-bash.exe，进入项目目录下，输入git push -u origin master或git push -u origin master -f并回车，输入yes.
